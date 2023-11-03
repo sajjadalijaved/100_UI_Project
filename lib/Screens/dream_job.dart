@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 // ignore_for_file: library_private_types_in_public_api
 
-
 class DreamJob extends StatefulWidget {
   const DreamJob({Key? key}) : super(key: key);
 
@@ -15,15 +14,11 @@ class _DreamJobState extends State<DreamJob> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffF1EBDA),
-      body: SizedBox(
-        width: double.infinity,
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            const SizedBox(
-              height: 50,
-            ),
             FadeInUp(
                 duration: const Duration(milliseconds: 1500),
                 child: Image.network(

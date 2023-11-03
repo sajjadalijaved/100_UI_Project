@@ -116,7 +116,10 @@ class _ExpensesPageState extends State<ExpensesPage> {
                 children: [
                   const Text(
                     "\$ 1840.00",
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
                     height: 10,
@@ -126,7 +129,7 @@ class _ExpensesPageState extends State<ExpensesPage> {
                     width: 30,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey.shade800),
+                        color: Colors.white),
                   )
                 ],
               ),
@@ -141,10 +144,10 @@ class _ExpensesPageState extends State<ExpensesPage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
+                      const Text(
                         "Total in November",
                         style: TextStyle(
-                          color: Colors.grey.shade500,
+                          color: Colors.white,
                           fontSize: 10,
                         ),
                       ),

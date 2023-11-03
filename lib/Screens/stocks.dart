@@ -96,7 +96,7 @@ class _StocksPageState extends State<StocksPage> {
             ),
           ],
         ),
-        body: Container(
+        body: SingleChildScrollView(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[

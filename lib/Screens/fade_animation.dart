@@ -17,6 +17,7 @@ class _FadeAnimationState extends State<FadeAnimation> {
     return SizedBox(
       height: 300,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           AnimatedOpacity(
             opacity: _visible ? 1 : 0,

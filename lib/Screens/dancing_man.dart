@@ -76,9 +76,6 @@ class _DancingManState extends State<DancingMan>
                         height: 500,
                       ),
 
-                const SizedBox(
-                  height: 50,
-                ),
                 // animated arrow up Icon
                 _isDancing
                     ? const Column(
