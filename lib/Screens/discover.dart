@@ -4,7 +4,6 @@ import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 // ignore_for_file: library_private_types_in_public_api
 
-
 class DiscoverPage extends StatefulWidget {
   const DiscoverPage({Key? key}) : super(key: key);
 
@@ -94,150 +93,150 @@ class _DiscoverPageState extends State<DiscoverPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: SalomonBottomBar(
-          currentIndex: _currentIndex,
-          margin:
-              const EdgeInsets.only(bottom: 30, left: 20, right: 20, top: 10),
-          onTap: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
-          },
-          items: [
-            SalomonBottomBarItem(
-                icon: const Icon(Icons.home),
-                title: const Text("Home"),
-                selectedColor: Colors.purple),
-            SalomonBottomBarItem(
-                icon: const Icon(Icons.favorite_border),
-                title: const Text("Likes"),
-                selectedColor: Colors.pink),
-            SalomonBottomBarItem(
-                icon: const Icon(Icons.search),
-                title: const Text("Search"),
-                selectedColor: Colors.orange),
-            SalomonBottomBarItem(
-                icon: const Icon(Icons.person),
-                title: const Text("Profile"),
-                selectedColor: Colors.teal)
-          ],
-        ),
-        body: NestedScrollView(
-            headerSliverBuilder: (context, value) {
-              return [
-                SliverToBoxAdapter(
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Column(
-                      children: [
-                        const SizedBox(
-                          height: 60,
-                        ),
-                        FadeInDown(
-                          child: Row(
-                            children: [
-                              Text(
-                                "Discover \nToday's Posts 🔥",
-                                style: TextStyle(
-                                    fontSize: 32,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.grey.shade800,
-                                    height: 1.5),
-                              )
-                            ],
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        FadeInDown(
-                          delay: const Duration(milliseconds: 400),
-                          duration: const Duration(milliseconds: 800),
-                          child: Container(
-                            height: 46,
-                            decoration: BoxDecoration(
-                                color: Colors.grey.shade200,
-                                borderRadius: BorderRadius.circular(8)),
-                            child: TextField(
-                              cursorColor: Colors.black,
-                              decoration: InputDecoration(
-                                  prefixIcon: Icon(
-                                    Icons.search,
-                                    color: Colors.grey.shade700,
-                                  ),
-                                  border: InputBorder.none,
-                                  hintText: "Classic Style",
-                                  hintStyle:
-                                      TextStyle(color: Colors.grey.shade500)),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                )
-              ];
-            },
-            body: DefaultTabController(
-              length: 4,
-              child: Column(
-                children: [
-                  FadeInDown(
-                    delay: const Duration(milliseconds: 500),
-                    child: TabBar(
-                        labelColor: Colors.black,
-                        unselectedLabelColor: Colors.grey.shade600,
-                        indicatorColor: Colors.black,
-                        tabs: const [
-                          Tab(
-                            text: "Popular",
-                          ),
-                          Tab(
-                            text: "New",
-                          ),
-                          Tab(
-                            text: "Classic",
-                          ),
-                          Tab(
-                            text: "Stylish",
-                          )
-                        ]),
-                  ),
-                  Expanded(
-                    child: TabBarView(
-                      children: [
-                        StaggeredGridView.countBuilder(
-                          padding: const EdgeInsets.all(0),
-                          crossAxisCount: 4,
-                          controller: _scrollController,
-                          itemCount: images.length,
-                          itemBuilder: (context, index) {
-                            return FadeInUp(
-                              delay: Duration(milliseconds: index * 50),
-                              duration:
-                                  Duration(milliseconds: (index * 50) + 800),
-                              child: Container(
-                                color: Colors.black,
-                                child: Image.network(
-                                  images[index],
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            );
-                          },
-                          staggeredTileBuilder: (int index) =>
-                              StaggeredTile.count(2, index.isEven ? 4 : 2),
-                          mainAxisSpacing: 1.0,
-                          crossAxisSpacing: 1.0,
-                        ),
-                        const Center(),
-                        const Center(),
-                        const Center()
-                      ],
-                    ),
-                  )
-                ],
+      bottomNavigationBar: SalomonBottomBar(
+        currentIndex: _currentIndex,
+        margin: const EdgeInsets.only(bottom: 30, left: 20, right: 20, top: 10),
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        items: [
+          SalomonBottomBarItem(
+              icon: const Icon(Icons.home),
+              title: const Text("Home"),
+              selectedColor: Colors.purple),
+          SalomonBottomBarItem(
+              icon: const Icon(Icons.favorite_border),
+              title: const Text("Likes"),
+              selectedColor: Colors.pink),
+          SalomonBottomBarItem(
+              icon: const Icon(Icons.search),
+              title: const Text("Search"),
+              selectedColor: Colors.orange),
+          SalomonBottomBarItem(
+              icon: const Icon(Icons.person),
+              title: const Text("Profile"),
+              selectedColor: Colors.teal)
+        ],
+      ),
+      body: NestedScrollView(
+        headerSliverBuilder: (context, value) {
+          return [
+            //   SliverToBoxAdapter(
+            //     child: Padding(
+            //       padding: const EdgeInsets.all(20.0),
+            //       child: Column(
+            //         children: [
+            //           const SizedBox(
+            //             height: 60,
+            //           ),
+            //           FadeInDown(
+            //             child: Row(
+            //               children: [
+            //                 Text(
+            //                   "Discover \nToday's Posts 🔥",
+            //                   style: TextStyle(
+            //                       fontSize: 32,
+            //                       fontWeight: FontWeight.w600,
+            //                       color: Colors.grey.shade800,
+            //                       height: 1.5),
+            //                 )
+            //               ],
+            //             ),
+            //           ),
+            //           const SizedBox(
+            //             height: 20,
+            //           ),
+            //           FadeInDown(
+            //             delay: const Duration(milliseconds: 400),
+            //             duration: const Duration(milliseconds: 800),
+            //             child: Container(
+            //               height: 46,
+            //               decoration: BoxDecoration(
+            //                   color: Colors.grey.shade200,
+            //                   borderRadius: BorderRadius.circular(8)),
+            //               child: TextField(
+            //                 cursorColor: Colors.black,
+            //                 decoration: InputDecoration(
+            //                     prefixIcon: Icon(
+            //                       Icons.search,
+            //                       color: Colors.grey.shade700,
+            //                     ),
+            //                     border: InputBorder.none,
+            //                     hintText: "Classic Style",
+            //                     hintStyle:
+            //                         TextStyle(color: Colors.grey.shade500)),
+            //               ),
+            //             ),
+            //           )
+            //         ],
+            //       ),
+            //     ),
+            //   )
+          ];
+        },
+        body:
+            //  DefaultTabController(
+            //   length: 4,
+            //   child: Column(
+            //     children: [
+            //       FadeInDown(
+            //         delay: const Duration(milliseconds: 500),
+            //         child: TabBar(
+            //             labelColor: Colors.black,
+            //             unselectedLabelColor: Colors.grey.shade600,
+            //             indicatorColor: Colors.black,
+            //             tabs: const [
+            //               Tab(
+            //                 text: "Popular",
+            //               ),
+            //               Tab(
+            //                 text: "New",
+            //               ),
+            //               Tab(
+            //                 text: "Classic",
+            //               ),
+            //               Tab(
+            //                 text: "Stylish",
+            //               )
+            //             ]),
+            //       ),
+            // Expanded(
+            //   child: TabBarView(
+            //     children: [
+            StaggeredGridView.countBuilder(
+          padding: const EdgeInsets.all(0),
+          crossAxisCount: 4,
+          controller: _scrollController,
+          itemCount: images.length,
+          itemBuilder: (context, index) {
+            return FadeInUp(
+              delay: Duration(milliseconds: index * 50),
+              duration: Duration(milliseconds: (index * 50) + 800),
+              child: Container(
+                color: Colors.black,
+                child: Image.network(
+                  images[index],
+                  fit: BoxFit.cover,
+                ),
               ),
-            )));
+            );
+          },
+          staggeredTileBuilder: (int index) =>
+              StaggeredTile.count(2, index.isEven ? 4 : 1),
+          mainAxisSpacing: 1.0,
+          crossAxisSpacing: 1.0,
+        ),
+        //         const Center(),
+        //         const Center(),
+        //         const Center()
+        //       ],
+        //     ),
+        //   )
+        // ],
+      ),
+    );
+    // ));
   }
 }
